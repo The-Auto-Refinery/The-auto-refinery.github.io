@@ -4,7 +4,27 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function autoFitText(element) {
+    const parent = element.parentNode;
+    const parentHeight = parent.clientHeight;
+    const parentWidth = parent.clientWidth;
+    let fontSize = parseInt(window.getComputedStyle(element).fontSize);
+
+    while (element.scrollHeight > parentHeight || element.scrollWidth > parentWidth) {
+        fontSize -= 1;
+        element.style.fontSize = fontSize + 'px';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const autoFitElements = document.querySelectorAll('.auto-fit-text');
+    autoFitElements.forEach(element => autoFitText(element));
+});
+	
+	
+	
+	
+	function($) {
 
 	var	$window = $(window),
 		$body = $('body'),

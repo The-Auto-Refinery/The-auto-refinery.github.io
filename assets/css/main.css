@@ -7,14 +7,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Color Scheme */
-:root {
-	--dark-blue: #003366;
-	--strong-black: #000000;
-	--pure-white: #ffffff;
-	--light-grey: #d3d3d3;
-}
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -39,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	background: #333333; /* Medium grey background */
+	color: #ffffff; /* White text */
 }
 
 ol, ul {
@@ -107,8 +101,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: var(--pure-white);
-		color: var(--strong-black);
+		background: #333333; /* Medium grey background */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -125,7 +118,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #646464;
+		color: #ffffff; /* White text */
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 14pt;
 		font-weight: 400;
@@ -177,8 +170,8 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
-		color: var(--dark-blue);
+		border-bottom: dotted 1px #00aaff; /* Vibrant blue border for links */
+		color: #00aaff; /* Vibrant blue for links */
 		text-decoration: none;
 	}
 
@@ -190,16 +183,16 @@ input, select, textarea {
 		}
 
 		a:hover {
-			border-bottom-color: transparent;
-			color: var(--light-grey);
+			border-bottom-color: #00aaff; /* Vibrant blue border on hover */
+			color: #00aaff; /* Vibrant blue on hover */
 		}
 
 			a:hover:before {
-				color: var(--light-grey);
+				color: #2ebaae !important;
 			}
 
 	strong, b {
-		color: var(--strong-black);
+		color: #3c3b3b;
 		font-weight: 700;
 	}
 
@@ -212,7 +205,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #3c3b3b;
+		color: #000000; /* Black text for headings */
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-weight: 800;
 		letter-spacing: 0.25em;
@@ -259,17 +252,18 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 4px var(--light-grey);
+		border-left: solid 4px #00aaff; /* Vibrant blue border for blockquotes */
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
 
 	code {
-		background: rgba(0, 0, 0, 0.075);
-		border: solid 1px var(--light-grey);
+		background: #444444; /* Darker grey background for code */
+		border: solid 1px #00aaff; /* Vibrant blue border for code */
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
+		color: #ffffff; /* White text for code */
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 	}
@@ -290,7 +284,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px var(--light-grey);
+		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
 		margin: 2em 0;
 	}
 
@@ -1847,6 +1841,8 @@ input, select, textarea {
 		border: solid 1px rgba(160, 160, 160, 0.3);
 		margin-bottom: 2em;
 		padding: 1.5em;
+		background: #ffffff; /* White background for boxes */
+		color: #000000; /* Black text for better visibility */
 	}
 
 		.box > :last-child,
@@ -1876,10 +1872,10 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 		-ms-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 		transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-		background-color: var(--dark-blue);
+		background-color: #00aaff; /* Vibrant blue background for buttons */
 		border: 0;
 		box-shadow: inset 0 0 0 1px rgba(160, 160, 160, 0.3);
-		color: var(--pure-white) !important;
+		color: #ffffff !important; /* White text for buttons */
 		cursor: pointer;
 		display: inline-block;
 		font-family: "Raleway", Helvetica, sans-serif;
@@ -1900,8 +1896,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 1px var(--light-grey);
-			color: var(--pure-white) !important; /* Change hover text color to white */
+			box-shadow: inset 0 0 0 1px #2ebaae;
+			color: #2ebaae !important;
 		}
 
 			input[type="submit"]:hover:active,
@@ -1909,7 +1905,7 @@ input, select, textarea {
 			input[type="button"]:hover:active,
 			button:hover:active,
 			.button:hover:active {
-				background-color: rgba(46, 186, 174, 0.05);
+				background-color: #0088cc; /* Darker blue on hover */
 			}
 
 		input[type="submit"]:before, input[type="submit"]:after,
@@ -2045,18 +2041,16 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="tel"],
 	select,
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(0, 0, 0, 0.075);
-		border: none;
-		border: solid 1px var(--light-grey);
+		background: #444444; /* Darker grey background for inputs */
+		border: solid 1px #00aaff; /* Vibrant blue border for inputs */
 		border-radius: 0;
-		color: inherit;
+		color: #ffffff; /* White text for inputs */
 		display: block;
 		outline: 0;
 		padding: 0 1em;
@@ -2079,8 +2073,8 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: var(--dark-blue);
-			box-shadow: inset 0 0 0 1px var(--dark-blue);
+			border-color: #00aaff; /* Vibrant blue border on focus */
+			box-shadow: inset 0 0 0 1px #00aaff; /* Vibrant blue shadow on focus */
 		}
 
 	.select-wrapper {
@@ -2198,7 +2192,7 @@ input, select, textarea {
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				background: rgba(160, 160, 160, 0.075);
-				border: solid 1px var(--light-grey);
+				border: solid 1px rgba(160, 160, 160, 0.3);
 				content: '';
 				display: inline-block;
 				font-size: 0.8em;
@@ -2221,8 +2215,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: var(--dark-blue);
-			box-shadow: 0 0 0 1px var(--dark-blue);
+			border-color: #2ebaae;
+			box-shadow: 0 0 0 1px #2ebaae;
 		}
 
 	input[type="radio"] + label:before {
@@ -2248,6 +2242,10 @@ input, select, textarea {
 		color: #aaaaaa !important;
 		opacity: 1.0;
 	}
+
+#service option {
+	color: #ffffff; /* White text for service options */
+}
 
 /* Icon */
 
@@ -2641,9 +2639,10 @@ input, select, textarea {
 		-webkit-flex-direction: column-reverse;
 		-ms-flex-direction: column-reverse;
 		flex-direction: column-reverse;
-		background: var(--pure-white);
-		border: solid 1px var(--light-grey);
+		background: #ffffff; /* White background for mini-posts */
+		border: solid 1px rgba(160, 160, 160, 0.3);
 		margin: 0 0 2em 0;
+		color: #000000; /* Black text for better visibility */
 	}
 
 		.mini-post .image {
@@ -2743,10 +2742,11 @@ input, select, textarea {
 
 	.post {
 		padding: 3em 3em 1em 3em ;
-		background: var(--pure-white);
-		border: solid 1px var(--light-grey);
+		background: #ffffff; /* White background for posts */
+		border: solid 1px rgba(160, 160, 160, 0.3);
 		margin: 0 0 3em 0;
 		position: relative;
+		color: #000000; /* Black text for better visibility */
 	}
 
 		.post > header {
@@ -2754,7 +2754,7 @@ input, select, textarea {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
-			border-bottom: solid 1px var(--light-grey);
+			border-bottom: solid 1px rgba(160, 160, 160, 0.3);
 			left: -3em;
 			margin: -3em 0 3em 0;
 			position: relative;
@@ -2781,7 +2781,7 @@ input, select, textarea {
 
 			.post > header .meta {
 				padding: 3.75em 3em 1.75em 3em ;
-				border-left: solid 1px var(--light-grey);
+				border-left: solid 1px rgba(160, 160, 160, 0.3);
 				min-width: 17em;
 				text-align: right;
 				width: 17em;
@@ -2850,7 +2850,7 @@ input, select, textarea {
 			}
 
 				.post > footer .stats li {
-					border-left: solid 1px var(--light-grey);
+					border-left: solid 1px rgba(160, 160, 160, 0.3);
 					display: inline-block;
 					font-family: "Raleway", Helvetica, sans-serif;
 					font-size: 0.6em;
@@ -2924,7 +2924,7 @@ input, select, textarea {
 					}
 
 						.post > header .meta > * {
-							border-left: solid 1px var(--light-grey);
+							border-left: solid 1px rgba(160, 160, 160, 0.3);
 							margin-left: 2em;
 							padding-left: 2em;
 						}
@@ -3094,7 +3094,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px var(--light-grey);
+				border: solid 1px rgba(160, 160, 160, 0.3);
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -3130,9 +3130,9 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: var(--dark-blue);
-		color: var(--pure-white);
-		border-bottom: solid 1px var(--light-grey);
+		background-color: #000000; /* Black background for header */
+		border-bottom: solid 1px #00aaff; /* Vibrant blue border for header */
+		color: #ffffff; /* White text for header */
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -3143,7 +3143,7 @@ input, select, textarea {
 	}
 
 		#header a {
-			color: var(--pure-white);
+			color: inherit;
 			text-decoration: none;
 		}
 
@@ -3163,15 +3163,11 @@ input, select, textarea {
 			line-height: inherit;
 			padding: 0 0 0 1.5em;
 			white-space: nowrap;
-			color: var(--pure-white); /* Make header text white */
 		}
 
 			#header h1 a {
+				color: #ffffff; /* White text for "The Auto Refinery" in the header */
 				font-size: 0.7em;
-				color: inherit;
-				text-decoration: none;
-				pointer-events: none;
-				cursor: default;
 			}
 
 		#header .links {
@@ -3179,7 +3175,7 @@ input, select, textarea {
 			-webkit-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
-			border-left: solid 1px var(--light-grey);
+			border-left: solid 1px rgba(160, 160, 160, 0.3);
 			height: inherit;
 			line-height: inherit;
 			margin-left: 1.5em;
@@ -3188,7 +3184,7 @@ input, select, textarea {
 		}
 
 			#header .links ul li {
-				border-left: solid 1px var(--light-grey);
+				border-left: solid 1px rgba(160, 160, 160, 0.3);
 				line-height: 1;
 				margin-left: 1em;
 				padding-left: 1em;
@@ -3221,7 +3217,7 @@ input, select, textarea {
 			}
 
 				#header .main ul li {
-					border-left: solid 1px var(--light-grey);
+					border-left: solid 1px rgba(160, 160, 160, 0.3);
 					height: inherit;
 					line-height: inherit;
 					white-space: nowrap;
@@ -3235,7 +3231,7 @@ input, select, textarea {
 					#header .main ul li > a {
 						text-decoration: none;
 						border-bottom: 0;
-						color: var(--pure-white);
+						color: #aaaaaa;
 						overflow: hidden;
 						position: relative;
 						text-indent: 4em;
@@ -3400,7 +3396,7 @@ input, select, textarea {
 	}
 
 		#sidebar > * {
-			border-top: solid 1px var(--light-grey);
+			border-top: solid 1px rgba(160, 160, 160, 0.3);
 			margin: 3em 0 0 0;
 			padding: 3em 0 0 0;
 		}
@@ -3414,7 +3410,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#sidebar {
-				border-top: solid 1px var(--light-grey);
+				border-top: solid 1px rgba(160, 160, 160, 0.3);
 				margin: 3em 0 0 0;
 				min-width: 0;
 				padding: 3em 0 0 0;
@@ -3456,19 +3452,13 @@ input, select, textarea {
 		}
 
 	#intro header h2 {
+		color: #ffffff; /* White text for "The Auto Refinery" */
 		font-size: 2em;
 		font-weight: 900;
 	}
 
 	#intro header p {
 		font-size: 0.8em;
-	}
-
-	#intro header h2 a {
-		color: inherit;
-		text-decoration: none;
-		pointer-events: none;
-		cursor: default;
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -3527,7 +3517,7 @@ input, select, textarea {
 	}
 
 	#footer .copyright {
-		color: var(--strong-black); /* Change copyright text color to black */
+		color: #aaaaaa;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.5em;
 		font-weight: 400;
@@ -3551,9 +3541,10 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: #ffffff;
-		border-left: solid 1px var(--light-grey);
+		background: #333333; /* Medium grey background for menu */
+		border-left: solid 1px #00aaff; /* Vibrant blue border for menu */
 		box-shadow: none;
+		color: #ffffff; /* White text for menu */
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -3566,7 +3557,7 @@ input, select, textarea {
 	}
 
 		#menu > * {
-			border-top: solid 1px var(--light-grey);
+			border-top: solid 1px rgba(160, 160, 160, 0.3);
 			padding: 3em;
 		}
 
@@ -3585,7 +3576,7 @@ input, select, textarea {
 
 			#menu .links > li {
 				border: 0;
-				border-top: dotted 1px var(--light-grey);
+				border-top: dotted 1px rgba(160, 160, 160, 0.3);
 				margin: 1.5em 0 0 0;
 				padding: 1.5em 0 0 0;
 			}
@@ -3638,26 +3629,3 @@ input, select, textarea {
 			}
 
 		}
-
-/* Contact Us */
-
-#contact {
-	margin: 3em 0;
-}
-
-#contact header {
-	margin-bottom: 1em;
-}
-
-#contact p {
-	margin-bottom: 2em;
-}
-
-#contact form {
-	margin: 0;
-}
-
-#contact .actions {
-	display: flex;
-	justify-content: space-between;
-}
