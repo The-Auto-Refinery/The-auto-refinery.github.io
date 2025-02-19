@@ -7,6 +7,14 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Color Scheme */
+:root {
+	--dark-blue: #003366;
+	--strong-black: #000000;
+	--pure-white: #ffffff;
+	--light-grey: #d3d3d3;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -99,7 +107,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f4f4f4;
+		background: var(--pure-white);
+		color: var(--strong-black);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -169,7 +178,7 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
-		color: inherit;
+		color: var(--dark-blue);
 		text-decoration: none;
 	}
 
@@ -182,15 +191,15 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #2ebaae !important;
+			color: var(--light-grey);
 		}
 
 			a:hover:before {
-				color: #2ebaae !important;
+				color: var(--light-grey);
 			}
 
 	strong, b {
-		color: #3c3b3b;
+		color: var(--strong-black);
 		font-weight: 700;
 	}
 
@@ -250,15 +259,15 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 4px rgba(160, 160, 160, 0.3);
+		border-left: solid 4px var(--light-grey);
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
 
 	code {
-		background: rgba(160, 160, 160, 0.075);
-		border: solid 1px rgba(160, 160, 160, 0.3);
+		background: rgba(0, 0, 0, 0.075);
+		border: solid 1px var(--light-grey);
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0.25em;
@@ -281,7 +290,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+		border-bottom: solid 1px var(--light-grey);
 		margin: 2em 0;
 	}
 
@@ -1867,10 +1876,10 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 		-ms-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 		transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-		background-color: transparent;
+		background-color: var(--dark-blue);
 		border: 0;
 		box-shadow: inset 0 0 0 1px rgba(160, 160, 160, 0.3);
-		color: #3c3b3b !important;
+		color: var(--pure-white) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-family: "Raleway", Helvetica, sans-serif;
@@ -1891,8 +1900,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 1px #2ebaae;
-			color: #2ebaae !important;
+			box-shadow: inset 0 0 0 1px var(--light-grey);
+			color: var(--pure-white) !important; /* Change hover text color to white */
 		}
 
 			input[type="submit"]:hover:active,
@@ -2043,9 +2052,9 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(160, 160, 160, 0.075);
+		background: rgba(0, 0, 0, 0.075);
 		border: none;
-		border: solid 1px rgba(160, 160, 160, 0.3);
+		border: solid 1px var(--light-grey);
 		border-radius: 0;
 		color: inherit;
 		display: block;
@@ -2070,8 +2079,8 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #2ebaae;
-			box-shadow: inset 0 0 0 1px #2ebaae;
+			border-color: var(--dark-blue);
+			box-shadow: inset 0 0 0 1px var(--dark-blue);
 		}
 
 	.select-wrapper {
@@ -2189,7 +2198,7 @@ input, select, textarea {
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				background: rgba(160, 160, 160, 0.075);
-				border: solid 1px rgba(160, 160, 160, 0.3);
+				border: solid 1px var(--light-grey);
 				content: '';
 				display: inline-block;
 				font-size: 0.8em;
@@ -2212,8 +2221,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #2ebaae;
-			box-shadow: 0 0 0 1px #2ebaae;
+			border-color: var(--dark-blue);
+			box-shadow: 0 0 0 1px var(--dark-blue);
 		}
 
 	input[type="radio"] + label:before {
@@ -2632,8 +2641,8 @@ input, select, textarea {
 		-webkit-flex-direction: column-reverse;
 		-ms-flex-direction: column-reverse;
 		flex-direction: column-reverse;
-		background: #ffffff;
-		border: solid 1px rgba(160, 160, 160, 0.3);
+		background: var(--pure-white);
+		border: solid 1px var(--light-grey);
 		margin: 0 0 2em 0;
 	}
 
@@ -2734,8 +2743,8 @@ input, select, textarea {
 
 	.post {
 		padding: 3em 3em 1em 3em ;
-		background: #ffffff;
-		border: solid 1px rgba(160, 160, 160, 0.3);
+		background: var(--pure-white);
+		border: solid 1px var(--light-grey);
 		margin: 0 0 3em 0;
 		position: relative;
 	}
@@ -2745,7 +2754,7 @@ input, select, textarea {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
-			border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+			border-bottom: solid 1px var(--light-grey);
 			left: -3em;
 			margin: -3em 0 3em 0;
 			position: relative;
@@ -2772,7 +2781,7 @@ input, select, textarea {
 
 			.post > header .meta {
 				padding: 3.75em 3em 1.75em 3em ;
-				border-left: solid 1px rgba(160, 160, 160, 0.3);
+				border-left: solid 1px var(--light-grey);
 				min-width: 17em;
 				text-align: right;
 				width: 17em;
@@ -2841,7 +2850,7 @@ input, select, textarea {
 			}
 
 				.post > footer .stats li {
-					border-left: solid 1px rgba(160, 160, 160, 0.3);
+					border-left: solid 1px var(--light-grey);
 					display: inline-block;
 					font-family: "Raleway", Helvetica, sans-serif;
 					font-size: 0.6em;
@@ -2915,7 +2924,7 @@ input, select, textarea {
 					}
 
 						.post > header .meta > * {
-							border-left: solid 1px rgba(160, 160, 160, 0.3);
+							border-left: solid 1px var(--light-grey);
 							margin-left: 2em;
 							padding-left: 2em;
 						}
@@ -3085,7 +3094,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px rgba(160, 160, 160, 0.3);
+				border: solid 1px var(--light-grey);
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -3121,8 +3130,9 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #ffffff;
-		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+		background-color: var(--dark-blue);
+		color: var(--pure-white);
+		border-bottom: solid 1px var(--light-grey);
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -3133,7 +3143,7 @@ input, select, textarea {
 	}
 
 		#header a {
-			color: inherit;
+			color: var(--pure-white);
 			text-decoration: none;
 		}
 
@@ -3153,10 +3163,15 @@ input, select, textarea {
 			line-height: inherit;
 			padding: 0 0 0 1.5em;
 			white-space: nowrap;
+			color: var(--pure-white); /* Make header text white */
 		}
 
 			#header h1 a {
 				font-size: 0.7em;
+				color: inherit;
+				text-decoration: none;
+				pointer-events: none;
+				cursor: default;
 			}
 
 		#header .links {
@@ -3164,7 +3179,7 @@ input, select, textarea {
 			-webkit-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
-			border-left: solid 1px rgba(160, 160, 160, 0.3);
+			border-left: solid 1px var(--light-grey);
 			height: inherit;
 			line-height: inherit;
 			margin-left: 1.5em;
@@ -3173,7 +3188,7 @@ input, select, textarea {
 		}
 
 			#header .links ul li {
-				border-left: solid 1px rgba(160, 160, 160, 0.3);
+				border-left: solid 1px var(--light-grey);
 				line-height: 1;
 				margin-left: 1em;
 				padding-left: 1em;
@@ -3206,7 +3221,7 @@ input, select, textarea {
 			}
 
 				#header .main ul li {
-					border-left: solid 1px rgba(160, 160, 160, 0.3);
+					border-left: solid 1px var(--light-grey);
 					height: inherit;
 					line-height: inherit;
 					white-space: nowrap;
@@ -3220,7 +3235,7 @@ input, select, textarea {
 					#header .main ul li > a {
 						text-decoration: none;
 						border-bottom: 0;
-						color: #aaaaaa;
+						color: var(--pure-white);
 						overflow: hidden;
 						position: relative;
 						text-indent: 4em;
@@ -3385,7 +3400,7 @@ input, select, textarea {
 	}
 
 		#sidebar > * {
-			border-top: solid 1px rgba(160, 160, 160, 0.3);
+			border-top: solid 1px var(--light-grey);
 			margin: 3em 0 0 0;
 			padding: 3em 0 0 0;
 		}
@@ -3399,7 +3414,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#sidebar {
-				border-top: solid 1px rgba(160, 160, 160, 0.3);
+				border-top: solid 1px var(--light-grey);
 				margin: 3em 0 0 0;
 				min-width: 0;
 				padding: 3em 0 0 0;
@@ -3449,6 +3464,13 @@ input, select, textarea {
 		font-size: 0.8em;
 	}
 
+	#intro header h2 a {
+		color: inherit;
+		text-decoration: none;
+		pointer-events: none;
+		cursor: default;
+	}
+
 	@media screen and (max-width: 1280px) {
 
 		#intro {
@@ -3490,7 +3512,14 @@ input, select, textarea {
 			}
 
 	}
-
+	.auto-fit-text {
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		font-size: 1em;
+		line-height: 1.2;
+	}
 /* Footer */
 
 	#footer .icons {
@@ -3498,7 +3527,7 @@ input, select, textarea {
 	}
 
 	#footer .copyright {
-		color: #aaaaaa;
+		color: var(--strong-black); /* Change copyright text color to black */
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.5em;
 		font-weight: 400;
@@ -3523,7 +3552,7 @@ input, select, textarea {
 		transition: transform 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
 		background: #ffffff;
-		border-left: solid 1px rgba(160, 160, 160, 0.3);
+		border-left: solid 1px var(--light-grey);
 		box-shadow: none;
 		height: 100%;
 		max-width: 80%;
@@ -3537,7 +3566,7 @@ input, select, textarea {
 	}
 
 		#menu > * {
-			border-top: solid 1px rgba(160, 160, 160, 0.3);
+			border-top: solid 1px var(--light-grey);
 			padding: 3em;
 		}
 
@@ -3556,7 +3585,7 @@ input, select, textarea {
 
 			#menu .links > li {
 				border: 0;
-				border-top: dotted 1px rgba(160, 160, 160, 0.3);
+				border-top: dotted 1px var(--light-grey);
 				margin: 1.5em 0 0 0;
 				padding: 1.5em 0 0 0;
 			}
@@ -3609,3 +3638,26 @@ input, select, textarea {
 			}
 
 		}
+
+/* Contact Us */
+
+#contact {
+	margin: 3em 0;
+}
+
+#contact header {
+	margin-bottom: 1em;
+}
+
+#contact p {
+	margin-bottom: 2em;
+}
+
+#contact form {
+	margin: 0;
+}
+
+#contact .actions {
+	display: flex;
+	justify-content: space-between;
+}
