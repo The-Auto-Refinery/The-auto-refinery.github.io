@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	background: #000000; /* Medium grey background */
+	background: #333333; /* Medium grey background */
 	color: #ffffff; /* White text */
 }
 
@@ -2639,7 +2639,7 @@ input, select, textarea {
 		-webkit-flex-direction: column-reverse;
 		-ms-flex-direction: column-reverse;
 		flex-direction: column-reverse;
-		background: #4d9ce1fa; /* White background for mini-posts */
+		background: #ffffff; /* White background for mini-posts */
 		border: solid 1px rgba(160, 160, 160, 0.3);
 		margin: 0 0 2em 0;
 		color: #000000; /* Black text for better visibility */
