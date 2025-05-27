@@ -1,0 +1,60 @@
+/* Accessibility Enhancements */
+
+:root {
+    --focus-ring-color: #0066ff;
+    --focus-ring-width: 2px;
+    --focus-ring-offset: 2px;
+}
+
+/* Basic focus styles */
+.focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[tabindex="0"]:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+}
+
+/* Skip to content accessibility link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 10px 15px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 0 0 5px 0;
+    transition: top 0.2s ease;
+    z-index: 1000;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Enhanced interactive element states */
+.auto-refinery a,
+.auto-refinery button,
+.auto-refinery .button,
+.auto-refinery [role="button"],
+.auto-refinery [tabindex="0"] {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Ensure all buttons have proper hover effects */
+.auto-refinery button:not([disabled]):hover,
+.auto-refinery .button:not([disabled]):hover,
+.auto-refinery [role="button"]:not([disabled]):hover {
+    transform: translateY(-2px);
+}
+
+/* Add active state */
+.auto-refinery button:active,
+.auto-refinery .button:active,
+.auto-refinery [role="button"]:active {
+    transform: translateY(1px);
+}
