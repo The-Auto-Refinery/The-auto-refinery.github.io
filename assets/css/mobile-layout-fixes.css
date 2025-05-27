@@ -1,0 +1,69 @@
+/* Mobile Layout Fixes for About and Contact Sections */
+
+/* About Section Mobile Fixes */
+@media screen and (max-width: 768px) {
+    .about-section .about-flex {
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .about-section .about-img-wrap {
+        width: 100% !important;
+        max-width: none !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .about-section .about-content {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .about-section .about-img-frame {
+        max-height: 250px !important;
+        overflow: hidden !important;
+    }
+    
+    /* Contact Section Mobile Fixes */
+    .contact-section .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        max-width: none !important;
+    }
+    
+    .contact-section .contact-card {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        padding: 1.5rem !important;
+        margin: 0 !important;
+    }
+    
+    .contact-section .social-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        max-width: 100% !important;
+    }
+    
+    .contact-section .social-link {
+        width: 100% !important;
+        min-width: auto !important;
+    }
+}
+
+/* Additional fixes for smaller mobile devices */
+@media screen and (max-width: 480px) {
+    .about-section .container {
+        padding: 1rem !important;
+    }
+    
+    .contact-section .container {
+        padding: 1rem !important;
+    }
+    
+    .contact-section .contact-card {
+        padding: 1rem !important;
+    }
+}
