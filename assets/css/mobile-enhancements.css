@@ -134,19 +134,93 @@
 
 /* Force proper container behavior */
 @media screen and (max-width: 768px) {
+    /* Critical mobile layout fixes */
+    .auto-refinery .services-grid,
+    .auto-refinery .services-grid-five,
     .services-section .services-grid {
         display: grid !important;
         grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
         gap: 2rem !important;
         padding: 0 1rem !important;
         width: 100% !important;
         max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
     }
     
-    .services-section .testimonial-card {
+    /* Override any split or column layouts on mobile */
+    .auto-refinery .split,
+    .split {
+        flex-direction: column !important;
+    }
+    
+    .auto-refinery .split > *,
+    .split > * {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
+        padding: 1rem 0 !important;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .auto-refinery .split > :last-child,
+    .split > :last-child {
+        border-bottom: none !important;
+    }
+    
+    /* Force all grid items to single column */
+    .auto-refinery [class*="col-"],
+    [class*="col-"] {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Service cards specific fixes */
+    .services-section .testimonial-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 2rem 0 !important;
         box-sizing: border-box !important;
+        flex: none !important;
+    }
+    
+    /* Ensure no flex shrink on service cards */
+    .auto-refinery .service-card,
+    .auto-refinery .testimonial-card {
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        flex-basis: auto !important;
+    }
+}
+
+/* Additional mobile layout resets */
+@media screen and (max-width: 736px) {
+    /* Reset any problematic layouts */
+    .auto-refinery .row,
+    .row {
+        flex-direction: column !important;
+    }
+    
+    .auto-refinery .row > *,
+    .row > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem 0 !important;
+    }
+    
+    /* Ensure proper spacing between elements */
+    .auto-refinery .services-grid > *,
+    .services-section .services-grid > * {
+        margin-bottom: 2rem !important;
+    }
+    
+    .auto-refinery .services-grid > *:last-child,
+    .services-section .services-grid > *:last-child {
+        margin-bottom: 0 !important;
     }
 }
