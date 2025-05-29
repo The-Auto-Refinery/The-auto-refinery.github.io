@@ -85,9 +85,38 @@
     .services-grid {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     .auto-refinery .services-grid .testimonial-card {
         margin-bottom: 1rem;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Fix for service cards with discount badges */
+    .auto-refinery .services-section .services-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: none !important;
+        gap: 2rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    .auto-refinery .services-section .testimonial-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .auto-refinery .services-section .services-grid {
+        padding: 0 1rem !important;
+        gap: 1.5rem !important;
     }
 }

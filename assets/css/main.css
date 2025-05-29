@@ -148,11 +148,10 @@ input, select, textarea {
 		}
 
 	a {
-		-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+		-moz-transition: color 0.2s ease;
+		-webkit-transition: color 0.2s ease;
+		-ms-transition: color 0.2s ease;
+		transition: color 0.2s ease;
 		color: inherit;
 		text-decoration: none;
 	}
@@ -198,21 +197,7 @@ input, select, textarea {
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
-				-moz-transition: max-width 0.2s ease;
-				-webkit-transition: max-width 0.2s ease;
-				-ms-transition: max-width 0.2s ease;
-				transition: max-width 0.2s ease;
-				border-radius: 0.2em;
-				bottom: 0;
-				content: '';
-				height: 0.05em;
-				position: absolute;
-				right: 0;
-				width: 100%;
+				display: none;
 			}
 
 	h2 {
@@ -370,13 +355,7 @@ input, select, textarea {
 }
 
 .services-section .section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5em;
-  left: 30%;
-  width: 40%;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #1e90ff, transparent);
+  display: none;
 }
 
 .services-section .services-grid {
@@ -698,23 +677,11 @@ input, select, textarea {
 }
 
 #navbar nav ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0.8em;
-  right: 0.8em;
-  height: 2px;
-  background: linear-gradient(90deg, #1e90ff, #2196F3);
-  transform: scaleX(0);
-  transition: transform 0.3s cubic-bezier(0.5, 0, 0.2, 1);
+  display: none;
 }
 
 #navbar nav ul li a:hover {
   color: #fff;
-}
-
-#navbar nav ul li a:hover::after {
-  transform: scaleX(1);
 }
 
 #navbar nav ul li a.button.nav-cta {
@@ -819,9 +786,7 @@ input, select, textarea {
   }
   
   #navbar nav ul li a::after {
-    left: 0;
-    right: 0;
-    bottom: 0;
+    display: none;
   }
   
   #navbar nav ul li a.button.nav-cta {
@@ -1225,19 +1190,7 @@ input, select, textarea {
 }
 
 .auto_refinery #navbar nav a:not(.button)::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-primary);
-    transition: width 0.3s ease;
-}
-
-.auto_refinery #navbar nav a:hover::after,
-.auto_refinery #navbar nav a.active::after {
-    width: 100%;
+    display: none;
 }
 
 .auto_refinery #navbar nav a:hover {
@@ -1565,48 +1518,32 @@ input, select, textarea {
     align-items: center;
 }
 
-.auto-refinery .about-img-wrap {
-    position: relative;
-}
-
-.auto-refinery .about-img-frame {
-    position: relative;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-card);
-    z-index: 1;
-}
-
 .auto-refinery .about-img {
     width: 100%;
     display: block;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.auto-refinery .about-img:hover {
-    transform: scale(1.05);
-}
-
-.auto-refinery .blue-gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 102, 255, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
-    z-index: 1;
-    pointer-events: none;
 }
 
 .auto-refinery .about-img-accent {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 70%;
-    height: 70%;
-    border: 3px solid var(--color-primary);
-    border-radius: var(--border-radius);
-    z-index: 0;
+    display: none;
+}
+
+/* Remove section title overlays */
+.services-section .section-title::after,
+h1.major:after,
+#navbar nav ul li a::after {
+	display: none !important;
+}
+
+/* Remove any remaining blue overlays */
+.auto-refinery .services-grid .testimonial-card::before,
+.auto-refinery .services-grid .testimonial-card::after,
+.auto-refinery .contact-card::before {
+	display: none !important;
+}
+
+/* Remove hero overlay if causing issues */
+.hero-gradient-bg::before {
+	display: none !important;
 }
 
 .auto-refinery .about-features {
