@@ -106,14 +106,6 @@
             "name": "Auto Detailing Services",
             "itemListElement": [
                 {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Silver Detail",
-                        "description": "Quick, thorough cleaning for busy schedules. Includes exterior wash, interior vacuum, and wipe-down."
-                    }
-                },
-                {
                     "@type": "Offer", 
                     "itemOffered": {
                         "@type": "Service",
@@ -264,42 +256,23 @@
         <div class="pricing-notice">
           <p><strong>Pricing Notice:</strong> Prices vary by vehicle size and condition. Larger vehicles (trucks, SUVs) and vehicles requiring extra cleaning (excessive pet hair, bodily fluids, severe neglect) may incur a 10-15% surcharge.</p>
         </div>
-        <div class="services-grid">
-          <div class="service-card zoom-in">
-            <div class="service-icon"><span class="icon fa-car"></span></div>
-            <div class="service-content">
-              <h3>Silver Detail</h3>
-              <div class="service-price">Starting at $99.99</div>
-              <p>Perfect for maintaining your vehicle's appearance between deep cleans. Includes exterior hand wash, wheel cleaning, interior vacuum, dashboard wipe-down, and window cleaning. <strong>Great value for regular maintenance!</strong></p>
-              <div class="service-details" style="display: none;">
-                <h5>Complete Silver Detail Includes:</h5>
-                <ul>
-                  <li>Exterior hand wash with premium soap</li>
-                  <li>Wheel and tire cleaning</li>
-                  <li>Interior vacuum (seats, carpets, floor mats)</li>
-                  <li>Dashboard and console wipe-down</li>
-                  <li>Window cleaning (interior and exterior)</li>
-                  <li>Tire shine application</li>
-                  <li>Basic exterior rinse and dry</li>
-                  <li>Bug and tar removal</li>
-                </ul>
-                <p><em>Perfect for busy schedules and regular vehicle maintenance. Quick, efficient, and thorough cleaning that keeps your car looking fresh.</em></p>
-              </div>
-              <button class="see-more-btn" onclick="toggleDetails(this)">See More Details</button>
-              <a href="https://theautorefinery.setmore.com" target="_blank" class="button ghost">Book Now</a>
-            </div>
-          </div>
+        <div class="services-grid services-grid-five">
           
-          <div class="service-card zoom-in delay-1">
+          <div class="service-card zoom-in">
             <div class="service-icon"><span class="icon fa-car-side"></span></div>
             <div class="service-content">
               <h3>Gold Detail</h3>
               <div class="service-price">Starting at $149.99</div>
-              <p><strong>Most Popular!</strong> Our comprehensive package that transforms your vehicle inside and out. Includes everything in Silver Detail plus clay bar treatment, wax application, detailed interior cleaning, and door jamb cleaning. <strong>The perfect balance of value and results!</strong></p>
+              <p><strong>Most Popular!</strong> Our comprehensive package that transforms your vehicle inside and out. Includes premium exterior wash, clay bar treatment, wax application, detailed interior cleaning, and door jamb cleaning. <strong>The perfect balance of value and results!</strong></p>
               <div class="service-details" style="display: none;">
                 <h5>Complete Gold Detail Includes:</h5>
                 <ul>
-                  <li>Everything from Silver Detail package</li>
+                  <li>Premium exterior hand wash with high-quality soap</li>
+                  <li>Wheel and tire cleaning with specialized products</li>
+                  <li>Interior vacuum (seats, carpets, floor mats)</li>
+                  <li>Dashboard and console wipe-down with protectant</li>
+                  <li>Window cleaning (interior and exterior)</li>
+                  <li>Tire shine application</li>
                   <li>Premium carnauba wax application</li>
                   <li>Detailed interior cleaning and conditioning</li>
                   <li>Fabric and Surface protection treatment</li>
@@ -312,24 +285,27 @@
             </div>
           </div>
           
-          <div class="service-card zoom-in delay-2">
+          <div class="service-card zoom-in delay-1">
             <div class="service-icon"><span class="icon fa-gem"></span></div>
             <div class="service-content">
+              <div class="discount-badge">
+                <span class="discount-text">20% OFF</span>
+                <span class="discount-subtext">Limited Time</span>
+              </div>
               <h3>Platinum Detail</h3>
-              <div class="service-price">Starting at $249.99</div>
+              <div class="service-price">
+                <span class="original-price">$249.99</span>
+                <span class="discounted-price">Starting at $199.99</span>
+              </div>
               <p><strong>Ultimate luxury experience!</strong> The pinnacle of automotive care with show-quality results. Includes everything in Gold Detail plus carpet extraction, steam cleaning, premium wax, and meticulous attention to every detail. <strong>Required for ceramic coating. Transform your vehicle into a masterpiece!</strong></p>
               <div class="service-details" style="display: none;">
                 <h5>Complete Platinum Detail Includes:</h5>
                 <ul>
                   <li>Everything from Gold Detail package</li>
                   <li>Deep carpet extraction and shampooing</li>
-                  <li>Steam cleaning of all interior surfaces</li>
-                  <li>Premium multi-stage wax application</li>
-                  <li>Surface Conditioning and Protectant</li>
-                  <li>Detailed trim and molding cleaning</li>
-                  <li>Door Jamb and threshold Cleaning</li>
-                  <li>Complete interior sanitization</li>
-                  <li>Show-quality final inspection</li>
+                  <li>Steam cleaning for interior surfaces</li>
+                  <li>Premium paint correction preparation</li>
+                  <li>Enhanced protective treatments</li>
                 </ul>
                 <p><em>The ultimate detailing experience providing concours-level results. Every surface is meticulously cleaned, protected, and perfected. This is the foundation required for our ceramic coating services.</em></p>
               </div>
@@ -338,7 +314,7 @@
             </div>
           </div>
           
-          <div class="service-card zoom-in">
+          <div class="service-card zoom-in delay-2">
             <div class="service-icon"><span class="icon fa-magic"></span></div>
             <div class="service-content">
               <h3>Paint Correction</h3>
@@ -348,7 +324,7 @@
             </div>
           </div>
           
-          <div class="service-card zoom-in delay-1">
+          <div class="service-card zoom-in">
             <div class="service-icon"><span class="icon fa-shield-alt"></span></div>
             <div class="service-content">
               <h3>Ceramic Coating - Gold</h3>
@@ -358,12 +334,12 @@
             </div>
           </div>
           
-          <div class="service-card zoom-in delay-2">
+          <div class="service-card zoom-in delay-1">
             <div class="service-icon"><span class="icon fa-gem"></span></div>
             <div class="service-content">
               <h3>Ceramic Coating - Platinum</h3>
               <div class="service-price">Starting at $900.00</div>
-              <p>Premium dual-layer ceramic coating with light to heavy paint correction included. Requires Platinum Detail package. 5-year durability with enhanced gloss and protection.</p>
+              <p>Premium multi-layer ceramic coating with comprehensive paint correction. Ultimate protection and shine for discerning vehicle owners.</p>
               <span class="button ghost disabled">CURRENTLY UNAVAILABLE</span>
             </div>
           </div>
