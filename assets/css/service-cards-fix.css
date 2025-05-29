@@ -265,6 +265,8 @@
         grid-template-rows: auto;
         gap: 2rem;
         padding: 0 1rem;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     .auto-refinery .services-grid-five .service-card:nth-child(1) {
@@ -297,31 +299,51 @@
     .auto-refinery .service-card {
         padding: 2rem 1.5rem;
         min-height: 320px;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
 
 @media screen and (max-width: 736px) {
     .auto-refinery .services-grid,
     .auto-refinery .services-grid-five {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 2rem;
-        padding: 0 1rem;
-        max-width: 100%;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        gap: 2rem !important;
+        padding: 0 1rem !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
     .auto-refinery .services-grid-five .service-card {
-        grid-column: 1;
-        grid-row: auto;
-        max-width: 100%;
-        margin: 0;
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
     
     .auto-refinery .service-card {
-        padding: 2rem 1.5rem;
-        min-height: 300px;
-        width: 100%;
-        max-width: 100%;
+        padding: 2rem 1.5rem !important;
+        min-height: 300px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+    
+    /* Fix discount badge positioning on mobile */
+    .auto-refinery .discount-badge {
+        width: 70px !important;
+        height: 70px !important;
+        top: -8px !important;
+        right: -8px !important;
+        position: absolute !important;
+        z-index: 10 !important;
     }
     
     .auto-refinery .service-icon {
@@ -344,13 +366,6 @@
         margin-bottom: 1.5rem;
     }
     
-    .auto-refinery .discount-badge {
-        width: 70px;
-        height: 70px;
-        top: -8px;
-        right: -8px;
-    }
-    
     .auto-refinery .discount-text {
         font-size: 0.8rem;
     }
@@ -369,13 +384,18 @@
 @media screen and (max-width: 480px) {
     .auto-refinery .services-grid,
     .auto-refinery .services-grid-five {
-        padding: 0 0.5rem;
-        gap: 1.5rem;
+        padding: 0 0.5rem !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     .auto-refinery .service-card {
-        padding: 1.8rem 1.2rem;
-        min-height: 280px;
+        padding: 1.8rem 1.2rem !important;
+        min-height: 280px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
     
     .auto-refinery .service-content h3 {
@@ -389,6 +409,22 @@
     .auto-refinery .service-content .button {
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
+    }
+    
+    /* Ensure discount badge doesn't interfere with layout */
+    .auto-refinery .discount-badge {
+        width: 60px !important;
+        height: 60px !important;
+        top: -5px !important;
+        right: -5px !important;
+    }
+    
+    .auto-refinery .discount-text {
+        font-size: 0.7rem !important;
+    }
+    
+    .auto-refinery .discount-subtext {
+        font-size: 0.5rem !important;
     }
 }
 

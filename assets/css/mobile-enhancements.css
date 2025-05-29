@@ -83,11 +83,13 @@
 /* Service cards mobile styles */
 @media screen and (max-width: 768px) {
     .services-grid {
+        display: grid !important;
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
         padding: 0 1rem !important;
         width: 100% !important;
         max-width: 100% !important;
+        margin: 0 auto !important;
     }
     
     .auto-refinery .services-grid .testimonial-card {
@@ -95,6 +97,7 @@
         width: 100% !important;
         max-width: 100% !important;
         min-width: auto !important;
+        flex: none !important;
     }
     
     .auto-refinery .service-card {
@@ -102,6 +105,16 @@
         max-width: 100% !important;
         min-width: auto !important;
         margin: 0 !important;
+        flex: none !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Override any conflicting styles */
+    .auto-refinery .services-grid-five .service-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        grid-column: 1 !important;
+        grid-row: auto !important;
     }
 }
 
@@ -109,5 +122,31 @@
     .services-grid {
         padding: 0 0.5rem !important;
         gap: 1.5rem !important;
+        width: 100% !important;
+    }
+    
+    .auto-refinery .service-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+/* Force proper container behavior */
+@media screen and (max-width: 768px) {
+    .services-section .services-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        padding: 0 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .services-section .testimonial-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
     }
 }
