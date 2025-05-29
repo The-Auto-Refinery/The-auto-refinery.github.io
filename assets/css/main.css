@@ -392,30 +392,66 @@ input, select, textarea {
 /* Mobile responsive fixes for services grid */
 @media screen and (max-width: 980px) {
   .services-section .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .auto-refinery .services-grid,
+  .auto-refinery .services-grid-five {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
   }
 }
 
 @media screen and (max-width: 736px) {
   .services-section .services-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1rem;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
+    display: grid !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .services-section .testimonial-card {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 2rem 0 !important;
+    grid-column: 1 !important;
+  }
+  
+  .auto-refinery .services-grid,
+  .auto-refinery .services-grid-five {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
+    display: grid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .auto-refinery .services-grid .testimonial-card,
+  .auto-refinery .services-grid-five .service-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
   }
 }
 
 @media screen and (max-width: 480px) {
   .services-section .services-grid {
-    padding: 0 0.5rem;
-    gap: 1.5rem;
+    padding: 0 0.5rem !important;
+    gap: 1.5rem !important;
+  }
+  
+  .auto-refinery .services-grid,
+  .auto-refinery .services-grid-five {
+    padding: 0 0.5rem !important;
+    gap: 1.5rem !important;
   }
 }
 
@@ -1595,11 +1631,11 @@ input, select, textarea {
     align-items: center;
 }
 
-.auto-refinery .about-img-wrap {
+.auto_refinery .about-img-wrap {
     position: relative;
 }
 
-.auto-refinery .about-img-frame {
+.auto_refinery .about-img-frame {
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -1607,13 +1643,13 @@ input, select, textarea {
     z-index: 1;
 }
 
-.auto-refinery .about-img {
+.auto_refinery .about-img {
     width: 100%;
     display: block;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.auto-refinery .about-img:hover {
+.auto_refinery .about-img:hover {
     transform: scale(1.05);
 }
 
@@ -1628,7 +1664,7 @@ input, select, textarea {
     pointer-events: none;
 }
 
-.auto-refinery .about-img-accent {
+.auto_refinery .about-img-accent {
     position: absolute;
     bottom: -20px;
     right: -20px;

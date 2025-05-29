@@ -454,3 +454,63 @@
 .auto-refinery .service-card.zoom-in.in-view {
     animation-play-state: running;
 }
+
+/* EMERGENCY MOBILE OVERRIDE - Must be last */
+@media screen and (max-width: 768px) {
+    /* Force single column layout with highest specificity */
+    .auto-refinery .services-section .services-grid,
+    .services-section .auto-refinery .services-grid,
+    .auto-refinery .services-grid,
+    .auto-refinery .services-grid-five {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        gap: 2rem !important;
+        padding: 0 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Force all service cards to full width */
+    .auto-refinery .services-section .services-grid .testimonial-card,
+    .services-section .auto-refinery .services-grid .testimonial-card,
+    .auto-refinery .services-grid .testimonial-card,
+    .auto-refinery .services-grid-five .service-card,
+    .auto-refinery .service-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto !important;
+        margin: 0 0 2rem 0 !important;
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        flex: none !important;
+        float: none !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Remove any nth-child grid positioning on mobile */
+    .auto-refinery .services-grid-five .service-card:nth-child(1),
+    .auto-refinery .services-grid-five .service-card:nth-child(2),
+    .auto-refinery .services-grid-five .service-card:nth-child(3),
+    .auto-refinery .services-grid-five .service-card:nth-child(4),
+    .auto-refinery .services-grid-five .service-card:nth-child(5) {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .auto-refinery .services-section .services-grid,
+    .services-section .auto-refinery .services-grid,
+    .auto-refinery .services-grid,
+    .auto-refinery .services-grid-five {
+        padding: 0 0.5rem !important;
+        gap: 1.5rem !important;
+    }
+}
