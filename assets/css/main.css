@@ -1852,6 +1852,66 @@ h1.major:after,
 
 /* Mobile specific improvements */
 @media screen and (max-width: 768px) {
+    /* Services section mobile fixes for Safari */
+    .services-section .services-grid {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .services-section .testimonial-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 1.5rem !important;
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 auto !important;
+        flex: 0 0 auto !important;
+        display: block !important;
+        position: relative !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Auto-refinery specific mobile fixes for Safari */
+    .auto-refinery .services-grid {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 2rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    
+    .auto-refinery .services-grid .testimonial-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 auto !important;
+        flex: 0 0 auto !important;
+        display: block !important;
+        position: relative !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+    
     /* About section mobile improvements */
     .auto-refinery .about-section {
         padding: 4rem 0 !important;
@@ -1873,11 +1933,23 @@ h1.major:after,
     }
     
     .auto-refinery .contact-grid {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 2rem !important;
         margin-top: 2rem !important;
     }
     
     .auto-refinery .contact-card {
         text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
     }
     
     .auto-refinery .contact-card .contact-icon {
@@ -1886,11 +1958,29 @@ h1.major:after,
 }
 
 @media screen and (max-width: 480px) {
+    /* Additional Safari mobile fixes for smaller screens */
+    .services-section .services-grid,
+    .auto-refinery .services-grid {
+        padding: 0 0.5rem !important;
+        gap: 1rem !important;
+    }
+    
+    .services-section .testimonial-card,
+    .auto-refinery .services-grid .testimonial-card {
+        margin: 0 auto 1rem !important;
+        padding: 1.5rem 1rem !important;
+    }
+    
     .auto-refinery .about-section {
         padding: 3rem 0 !important;
     }
     
     .auto-refinery .contact-section {
         padding: 3rem 0 !important;
+    }
+    
+    .auto-refinery .contact-grid {
+        gap: 1.5rem !important;
+        padding: 0 0.5rem !important;
     }
 }

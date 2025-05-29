@@ -1,0 +1,114 @@
+/* Safari Mobile Fixes */
+
+/* Force flexbox fallback for Safari on mobile */
+@supports (-webkit-appearance: none) {
+    @media screen and (max-width: 768px) {
+        .services-section .services-grid,
+        .auto-refinery .services-grid {
+            display: -webkit-box !important;
+            display: -webkit-flex !important;
+            display: flex !important;
+            -webkit-box-orient: vertical !important;
+            -webkit-flex-direction: column !important;
+            flex-direction: column !important;
+            -webkit-box-align: stretch !important;
+            -webkit-align-items: stretch !important;
+            align-items: stretch !important;
+            grid-template-columns: none !important;
+            grid-template-rows: none !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+            padding: 0 1rem !important;
+            gap: 1.5rem !important;
+        }
+        
+        .services-section .testimonial-card,
+        .auto-refinery .services-grid .testimonial-card {
+            -webkit-box-flex: 0 !important;
+            -webkit-flex: 0 0 auto !important;
+            flex: 0 0 auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+            display: block !important;
+            position: relative !important;
+            overflow: visible !important;
+            -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+        }
+        
+        /* Contact grid Safari mobile fix */
+        .auto-refinery .contact-grid {
+            display: -webkit-box !important;
+            display: -webkit-flex !important;
+            display: flex !important;
+            -webkit-box-orient: vertical !important;
+            -webkit-flex-direction: column !important;
+            flex-direction: column !important;
+            grid-template-columns: none !important;
+            gap: 2rem !important;
+        }
+        
+        .auto-refinery .contact-card {
+            -webkit-box-flex: 0 !important;
+            -webkit-flex: 0 0 auto !important;
+            flex: 0 0 auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .services-section .services-grid,
+        .auto-refinery .services-grid {
+            padding: 0 0.5rem !important;
+            gap: 1rem !important;
+        }
+        
+        .auto-refinery .contact-grid {
+            gap: 1.5rem !important;
+            padding: 0 0.5rem !important;
+        }
+    }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+    @media screen and (max-width: 768px) {
+        .services-section .services-grid,
+        .auto-refinery .services-grid {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+            padding: 0 1rem !important;
+        }
+        
+        .services-section .testimonial-card,
+        .auto-refinery .services-grid .testimonial-card {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto 1.5rem !important;
+            float: none !important;
+            clear: both !important;
+            position: relative !important;
+            overflow: visible !important;
+        }
+        
+        .auto-refinery .contact-grid {
+            display: block !important;
+        }
+        
+        .auto-refinery .contact-card {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto 2rem !important;
+            float: none !important;
+            clear: both !important;
+        }
+    }
+}
