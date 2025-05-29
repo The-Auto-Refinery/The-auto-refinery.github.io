@@ -84,10 +84,30 @@
 @media screen and (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
+        gap: 2rem !important;
+        padding: 0 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     .auto-refinery .services-grid .testimonial-card {
         margin-bottom: 1rem;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto !important;
+    }
+    
+    .auto-refinery .service-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto !important;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-grid {
+        padding: 0 0.5rem !important;
+        gap: 1.5rem !important;
     }
 }

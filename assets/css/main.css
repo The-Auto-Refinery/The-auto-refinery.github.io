@@ -389,6 +389,36 @@ input, select, textarea {
   z-index: 2;
 }
 
+/* Mobile responsive fixes for services grid */
+@media screen and (max-width: 980px) {
+  .services-section .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .services-section .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .services-section .testimonial-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services-section .services-grid {
+    padding: 0 0.5rem;
+    gap: 1.5rem;
+  }
+}
+
 .services-section .testimonial-card {
   background: rgba(17, 17, 17, 0.8) !important; 
   position: relative;

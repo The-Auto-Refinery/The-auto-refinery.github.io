@@ -262,8 +262,9 @@
     .auto-refinery .services-grid,
     .auto-refinery .services-grid-five {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 1.5rem;
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 0 1rem;
     }
     
     .auto-refinery .services-grid-five .service-card:nth-child(1) {
@@ -289,13 +290,13 @@
     .auto-refinery .services-grid-five .service-card:nth-child(5) {
         grid-column: 1 / 3;
         grid-row: 3;
-        max-width: 400px;
+        max-width: 500px;
         margin: 0 auto;
     }
     
     .auto-refinery .service-card {
         padding: 2rem 1.5rem;
-        min-height: 280px;
+        min-height: 320px;
     }
 }
 
@@ -303,46 +304,91 @@
     .auto-refinery .services-grid,
     .auto-refinery .services-grid-five {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        gap: 1rem;
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 0 1rem;
+        max-width: 100%;
     }
     
     .auto-refinery .services-grid-five .service-card {
         grid-column: 1;
+        grid-row: auto;
+        max-width: 100%;
+        margin: 0;
     }
     
     .auto-refinery .service-card {
-        padding: 1.5rem 1rem;
-        min-height: 250px;
+        padding: 2rem 1.5rem;
+        min-height: 300px;
+        width: 100%;
+        max-width: 100%;
     }
     
     .auto-refinery .service-icon {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 1rem;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.2rem;
     }
     
     .auto-refinery .service-icon .icon {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+    
+    .auto-refinery .service-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .auto-refinery .service-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .auto-refinery .discount-badge {
+        width: 70px;
+        height: 70px;
+        top: -8px;
+        right: -8px;
+    }
+    
+    .auto-refinery .discount-text {
+        font-size: 0.8rem;
+    }
+    
+    .auto-refinery .discount-subtext {
+        font-size: 0.55rem;
+    }
+    
+    .auto-refinery .service-price {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .auto-refinery .services-grid,
+    .auto-refinery .services-grid-five {
+        padding: 0 0.5rem;
+        gap: 1.5rem;
+    }
+    
+    .auto-refinery .service-card {
+        padding: 1.8rem 1.2rem;
+        min-height: 280px;
     }
     
     .auto-refinery .service-content h3 {
         font-size: 1.2rem;
     }
     
-    .auto-refinery .discount-badge {
-        width: 60px;
-        height: 60px;
-        top: -5px;
-        right: -5px;
+    .auto-refinery .service-content p {
+        font-size: 0.95rem;
     }
     
-    .auto-refinery .discount-text {
-        font-size: 0.7rem;
-    }
-    
-    .auto-refinery .discount-subtext {
-        font-size: 0.5rem;
+    .auto-refinery .service-content .button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
     }
 }
 
