@@ -1,0 +1,71 @@
+User-agent: *
+Allow: /
+
+# Priority pages for mobile detailing SEO
+Allow: /index.html
+Allow: /modesto-mobile-auto-detailing.html
+Allow: /mobile-detailing-locations.html
+Allow: /images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Block non-essential files to improve crawl budget
+Disallow: /nap-citations.html
+Disallow: /gbp-optimization.html
+Disallow: /schema-generator.html
+Disallow: /advanced-seo-checklist.html
+Disallow: /competitive-seo-analysis.html
+Disallow: /seo-action-plan-2024.html
+Disallow: /assets/js/admin/
+Disallow: /.git/
+Disallow: /backup/
+Disallow: /README.txt
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+
+# Sitemaps for search engines
+Sitemap: https://theautorefinery.online/sitemap.xml
+Sitemap: https://theautorefinery.online/mobile-sitemap.xml
+
+# Crawl delay optimization for different bots
+User-agent: Baiduspider
+Crawl-delay: 10
+
+User-agent: YandexBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Allow important social media crawlers for rich snippets
+User-agent: facebookexternalhit/*
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Google-specific optimizations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+
+User-agent: Googlebot-Mobile
+Allow: /

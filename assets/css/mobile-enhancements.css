@@ -120,3 +120,168 @@
         gap: 1.5rem !important;
     }
 }
+
+/* Location pages enhancements */
+.location-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+    border-color: rgba(0, 102, 255, 0.3);
+}
+
+.location-card.featured-location {
+    border: 2px solid rgba(0, 102, 255, 0.5);
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 51, 153, 0.05));
+}
+
+.location-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: linear-gradient(135deg, #0066ff, #0052cc);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    background: rgba(255, 193, 7, 0.2);
+    border: 1px solid rgba(255, 193, 7, 0.5);
+    color: #ffc107;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.service-areas {
+    background: rgba(0, 102, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #0066ff;
+    font-size: 0.9rem;
+}
+
+.location-link.primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #0066ff, #0052cc);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.location-link.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+}
+
+.service-area-map {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.service-radius {
+    margin-top: 2rem;
+}
+
+.service-radius h3 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 2rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+.city-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.city-tag {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.city-tag.primary {
+    background: rgba(0, 102, 255, 0.3);
+    border: 1px solid rgba(0, 102, 255, 0.5);
+    color: #66b3ff;
+}
+
+.city-tag.secondary {
+    background: rgba(0, 102, 255, 0.2);
+    border: 1px solid rgba(0, 102, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.city-tag.tertiary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.city-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 102, 255, 0.3);
+}
+
+.service-note {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Mobile responsiveness for location pages */
+@media (max-width: 768px) {
+    .location-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-area-map {
+        padding: 1.5rem;
+    }
+    
+    .city-grid {
+        gap: 0.3rem;
+    }
+    
+    .city-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .location-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}

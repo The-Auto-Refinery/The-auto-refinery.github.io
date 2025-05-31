@@ -1,0 +1,637 @@
+/* Location Pages Styling */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.location-card {
+    background: rgba(17, 17, 17, 0.8);
+    border-radius: 8px;
+    padding: 2rem;
+    border: 1px solid rgba(66, 66, 66, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+    border-color: rgba(0, 102, 255, 0.3);
+}
+
+.location-card h2 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.location-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.location-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.location-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.location-card li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.cta-section {
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+.cta-section h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Location Pages Specific Styling */
+
+.location-hero {
+    background: linear-gradient(135deg, rgba(0, 51, 153, 0.9), rgba(0, 102, 255, 0.8));
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.breadcrumb-nav {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #ffffff;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.location-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
+.location-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.location-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.highlight-item i {
+    color: #66b3ff;
+    font-size: 1.2rem;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.location-info h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+}
+
+.location-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    margin: 1rem 0;
+    list-style: none;
+    padding: 0;
+}
+
+.location-areas li {
+    background: rgba(0, 102, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border-left: 3px solid #0066ff;
+}
+
+.location-features {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    background: linear-gradient(135deg, #0066ff, #0052cc);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-content h3 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 0.5rem;
+}
+
+.location-services {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.service-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #0066ff;
+}
+
+.service-item h3 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 1rem;
+}
+
+.service-price {
+    background: rgba(0, 102, 255, 0.2);
+    color: #66b3ff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.location-cta {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 51, 153, 0.1));
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.location-cta h2 {
+    margin: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.cta-button {
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, #0066ff, #0052cc);
+    color: white;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #66b3ff;
+    border: 2px solid #66b3ff;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+}
+
+.location-map {
+    margin: 3rem 0;
+}
+
+.location-map h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 102, 255, 0.3);
+}
+
+.map-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Sidebar Styling */
+.location-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-widget {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-widget h3 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+}
+
+.booking-widget .button {
+    background: linear-gradient(135deg, #0066ff, #0052cc);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.booking-widget .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-info i {
+    color: #66b3ff;
+    width: 20px;
+}
+
+.contact-info a {
+    color: #66b3ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #ffffff;
+}
+
+/* Tag Cloud for Location Pages */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.location-tag {
+    background: rgba(0, 102, 255, 0.1);
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.location-tag:hover {
+    background: rgba(0, 102, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Multiple Testimonials */
+.sidebar-testimonial {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.sidebar-testimonial:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial-stars {
+    color: #ffc107;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Enhanced FAQ Section */
+.faq-section {
+    margin: 3rem 0;
+}
+
+.faq-section h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.faq-container {
+    margin-top: 1.5rem;
+}
+
+.faq-item {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+    padding: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(0, 102, 255, 0.1);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    padding-right: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+    color: #66b3ff;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.2rem 1.2rem;
+    display: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Internal Navigation Links */
+.location-nav-links {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.location-nav-links h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.nav-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.location-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: inherit;
+}
+
+.location-nav-link.active {
+    background: rgba(0, 102, 255, 0.2);
+    border-color: rgba(0, 102, 255, 0.4);
+}
+
+.location-nav-link.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.location-nav-link:not(.disabled):hover {
+    transform: translateY(-5px);
+    background: rgba(0, 102, 255, 0.3);
+    border-color: rgba(0, 102, 255, 0.5);
+}
+
+.location-nav-link i {
+    font-size: 2rem;
+    color: #66b3ff;
+    margin-bottom: 1rem;
+}
+
+.location-nav-link span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+.location-nav-link small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Enhanced Service Areas */
+.service-areas {
+    background: rgba(0, 102, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #0066ff;
+    font-size: 0.9rem;
+}
+
+.service-areas strong {
+    color: #66b3ff;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Location Content Section */
+.location-content-section {
+    padding: 3rem 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.location-info h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid rgba(0, 102, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+/* Mobile responsiveness enhancements */
+@media (max-width: 768px) {
+    .nav-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .location-nav-link {
+        padding: 1.5rem;
+    }
+    
+    .location-nav-link i {
+        font-size: 1.5rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+        padding-right: 0.5rem;
+    }
+    
+    .service-areas {
+        font-size: 0.8rem;
+    }
+    
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .location-title {
+        font-size: 2rem;
+    }
+    
+    .location-highlights {
+        gap: 1rem;
+    }
+    
+    .highlight-item {
+        font-size: 0.9rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .location-areas {
+        grid-template-columns: 1fr;
+    }
+}
