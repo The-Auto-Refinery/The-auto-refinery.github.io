@@ -1850,137 +1850,250 @@ h1.major:after,
     color: white;
 }
 
-/* Mobile specific improvements */
+/* Promotional Banner Styles */
+.promo-banner {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0066ff 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 102, 255, 0.3);
+}
+
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+    pointer-events: none;
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.promo-badge {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.promo-badge-text {
+    background: rgba(255, 71, 87, 0.9);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+    animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 0 6px 25px rgba(255, 71, 87, 0.5);
+        transform: scale(1.02);
+    }
+}
+
+.promo-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.promo-deals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.promo-deal {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(0, 102, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.promo-deal:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 102, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+}
+
+.deal-badge {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.weekend-deal .deal-badge {
+    background: linear-gradient(45deg, #ff4757, #ff3838);
+}
+
+.deal-discount {
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 800;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.deal-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.promo-separator {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 1rem;
+}
+
+.promo-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.promo-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.promo-button {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 180px;
+    text-align: center;
+}
+
+.promo-button.primary {
+    background: linear-gradient(45deg, #0066ff, #004cbf);
+    color: white;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 20px rgba(0, 102, 255, 0.3);
+}
+
+.promo-button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.5);
+    background: linear-gradient(45deg, #0052cc, #003d99);
+}
+
+.promo-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.promo-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+.promo-note {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
-    /* Services section mobile fixes for Safari */
-    .services-section .services-grid {
-        display: -webkit-box !important;
-        display: -ms-flexbox !important;
-        display: flex !important;
-        -webkit-box-orient: vertical !important;
-        -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-        flex-direction: column !important;
-        grid-template-columns: none !important;
-        gap: 1.5rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 1rem !important;
+    .promo-banner {
+        padding: 3rem 0;
     }
     
-    .services-section .testimonial-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto 1.5rem !important;
-        -webkit-box-flex: 0 !important;
-        -ms-flex: 0 0 auto !important;
-        flex: 0 0 auto !important;
-        display: block !important;
-        position: relative !important;
-        overflow: visible !important;
-        box-sizing: border-box !important;
+    .promo-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
     
-    /* Auto-refinery specific mobile fixes for Safari */
-    .auto-refinery .services-grid {
-        display: -webkit-box !important;
-        display: -ms-flexbox !important;
-        display: flex !important;
-        -webkit-box-orient: vertical !important;
-        -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-        flex-direction: column !important;
-        grid-template-columns: none !important;
-        gap: 2rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
+    .promo-deals {
+        flex-direction: column;
+        gap: 1rem;
     }
     
-    .auto-refinery .services-grid .testimonial-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        -webkit-box-flex: 0 !important;
-        -ms-flex: 0 0 auto !important;
-        flex: 0 0 auto !important;
-        display: block !important;
-        position: relative !important;
-        overflow: visible !important;
-        box-sizing: border-box !important;
+    .promo-deal {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
     
-    /* About section mobile improvements */
-    .auto-refinery .about-section {
-        padding: 4rem 0 !important;
+    .promo-separator {
+        order: 2;
+        margin: 0.5rem 0;
     }
     
-    .auto-refinery .about-flex {
-        display: block !important;
-        text-align: center !important;
+    .deal-discount {
+        font-size: 1.8rem;
     }
     
-    /* Contact section mobile improvements */
-    .auto-refinery .contact-section {
-        padding: 4rem 0 !important;
+    .promo-cta {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .auto-refinery .contact-section .section-title {
-        font-size: 2rem !important;
-        margin-bottom: 2rem !important;
-    }
-    
-    .auto-refinery .contact-grid {
-        display: -webkit-box !important;
-        display: -ms-flexbox !important;
-        display: flex !important;
-        -webkit-box-orient: vertical !important;
-        -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-        flex-direction: column !important;
-        grid-template-columns: none !important;
-        gap: 2rem !important;
-        margin-top: 2rem !important;
-    }
-    
-    .auto-refinery .contact-card {
-        text-align: center !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-    }
-    
-    .auto-refinery .contact-card .contact-icon {
-        margin: 0 auto 1rem !important;
+    .promo-button {
+        width: 100%;
+        max-width: 280px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* Additional Safari mobile fixes for smaller screens */
-    .services-section .services-grid,
-    .auto-refinery .services-grid {
-        padding: 0 0.5rem !important;
-        gap: 1rem !important;
+    .promo-banner {
+        padding: 2rem 0;
     }
     
-    .services-section .testimonial-card,
-    .auto-refinery .services-grid .testimonial-card {
-        margin: 0 auto 1rem !important;
-        padding: 1.5rem 1rem !important;
+    .promo-title {
+        font-size: 1.8rem;
     }
     
-    .auto-refinery .about-section {
-        padding: 3rem 0 !important;
+    .promo-deal {
+        padding: 1.5rem 1rem;
     }
     
-    .auto-refinery .contact-section {
-        padding: 3rem 0 !important;
-    }
-    
-    .auto-refinery .contact-grid {
-        gap: 1.5rem !important;
-        padding: 0 0.5rem !important;
+    .deal-discount {
+        font-size: 1.6rem;
     }
 }
