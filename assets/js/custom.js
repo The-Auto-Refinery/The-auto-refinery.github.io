@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileNavToggle = document.querySelector('.nav-toggler');
     const navMenu = document.querySelector('#navbar nav');
     
     // Initial check for scroll position
