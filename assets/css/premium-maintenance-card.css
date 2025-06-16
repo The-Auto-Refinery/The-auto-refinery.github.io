@@ -409,6 +409,30 @@
     .premium-card-cta .button {
         width: 100%;
     }
+    
+    .premium-badge-ribbon {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        transform: none !important;
+        background: linear-gradient(135deg, #ff4757, #ff6b81) !important;
+        color: white !important;
+        padding: 0.5rem 0.8rem !important;
+        border-radius: 4px !important;
+        font-weight: 700 !important;
+        font-size: 0.8rem !important;
+        letter-spacing: 0.5px !important;
+        z-index: 10 !important;
+        box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4) !important;
+        text-transform: uppercase !important;
+        white-space: nowrap !important;
+    }
+    
+    /* Ensure card container accommodates ribbon */
+    .service-card.premium-card {
+        padding-top: 1rem !important;
+        overflow: visible !important;
+    }
 }
 
 @media screen and (max-width: 576px) {

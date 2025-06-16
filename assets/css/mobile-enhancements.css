@@ -1526,3 +1526,79 @@
         order: 6;
     }
 }
+
+/* Mobile CTA Button Fixes */
+@media screen and (max-width: 768px) {
+    .cta-button {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0.5rem auto !important;
+        display: block !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Hero CTA button specific mobile fix */
+    .hero-section .cta-button {
+        margin: 1rem auto 0 auto !important;
+        max-width: 260px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cta-button {
+        padding: 0.7rem 1.2rem !important;
+        font-size: 0.95rem !important;
+        max-width: 240px !important;
+    }
+    
+    .hero-section .cta-button {
+        max-width: 220px !important;
+    }
+}
+
+/* Premium Maintenance Card Mobile Ribbon Fix */
+@media screen and (max-width: 768px) {
+    .premium-badge-ribbon {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        transform: none !important;
+        background: linear-gradient(135deg, #ff4757, #ff6b81) !important;
+        color: white !important;
+        padding: 0.5rem 0.8rem !important;
+        border-radius: 4px !important;
+        font-weight: 700 !important;
+        font-size: 0.8rem !important;
+        letter-spacing: 0.5px !important;
+        z-index: 10 !important;
+        box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4) !important;
+        text-transform: uppercase !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .premium-badge-ribbon {
+        top: 8px !important;
+        right: 8px !important;
+        padding: 0.4rem 0.6rem !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Additional Mobile Service Card Fixes */
+@media screen and (max-width: 768px) {
+    .service-card.premium-card {
+        overflow: visible !important;
+        position: relative !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* Ensure the ribbon doesn't get cut off */
+    .services-grid {
+        padding-top: 1rem !important;
+    }
+}
