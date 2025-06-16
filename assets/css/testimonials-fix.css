@@ -3,7 +3,7 @@
 /* Ensure testimonials container has proper structure */
 .auto-refinery .testimonials-slider {
     position: relative;
-    min-height: 485px !important;
+    min-height: 380px !important;
     height: auto !important;
     width: 100%;
     overflow: visible;
@@ -16,8 +16,8 @@
     left: 0 !important;
     width: 100% !important;
     height: auto !important;
-    min-height: 435px !important;
-    max-height: 435px !important;
+    min-height: 330px !important;
+    max-height: 330px !important;
     display: block !important;
     visibility: hidden !important;
     opacity: 0 !important;
@@ -97,12 +97,12 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .auto-refinery .testimonials-slider {
-        min-height: 485px !important;
+        min-height: 380px !important;
     }
     
     .auto-refinery .testimonial-card {
-        min-height: 435px !important;
-        max-height: 435px !important;
+        min-height: 330px !important;
+        max-height: 330px !important;
         padding: 1.5rem !important;
     }
 }

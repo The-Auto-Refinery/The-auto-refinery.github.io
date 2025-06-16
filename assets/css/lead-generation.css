@@ -1,0 +1,119 @@
+/* Lead Generation & Conversion Optimization Styles */
+
+/* Trust Badges in Hero Section */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.trust-badge:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+}
+
+.trust-badge i {
+    color: #66b3ff;
+    font-size: 1.1rem;
+}
+
+/* Urgency Banner */
+.urgency-banner {
+    background: linear-gradient(45deg, #ff4757, #ff3838);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem auto;
+    max-width: 300px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    animation: urgencyPulse 2s infinite;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+.urgency-banner i {
+    font-size: 1.1rem;
+    animation: urgencyTick 1s infinite;
+}
+
+@keyframes urgencyPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+    }
+}
+
+@keyframes urgencyTick {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .trust-badges {
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .trust-badge {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
+    
+    .urgency-banner {
+        margin: 1rem auto;
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .trust-badge {
+        width: 100%;
+        max-width: 200px;
+    }
+}

@@ -1,12 +1,12 @@
 /* Enhanced Testimonial Styling */
 
 .auto-refinery .testimonials-section {
-    padding: 5rem 0;
+    padding: 3rem 0 2rem 0;
 }
 
 .auto-refinery .testimonials-slider {
-    min-height: 485px;
-    max-height: 485px;
+    min-height: 380px;
+    max-height: 380px;
     height: auto;
     display: flex;
     align-items: center;
@@ -18,9 +18,9 @@
 .auto-refinery .testimonial-card {
     will-change: transform, opacity;
     display: block !important;
-    height: 430px !important;
-    min-height: 430px !important;
-    max-height: 430px !important;
+    height: 330px !important;
+    min-height: 330px !important;
+    max-height: 330px !important;
     overflow: hidden !important;
 }
 
@@ -85,7 +85,7 @@
 
 /* Enhanced indicators */
 .auto-refinery .testimonial-indicators {
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     gap: 0.8rem;
@@ -116,16 +116,16 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .auto-refinery .testimonials-slider {
-        min-height: 485px;
-        max-height: 485px;
+        min-height: 380px;
+        max-height: 380px;
         height: auto;
     }
     
     .auto-refinery .testimonial-card {
         padding: 1.5rem;
-        height: 430px !important;
-        min-height: 430px !important;
-        max-height: 430px !important;
+        height: 330px !important;
+        min-height: 330px !important;
+        max-height: 330px !important;
     }
     
     .auto-refinery .testimonial-nav {

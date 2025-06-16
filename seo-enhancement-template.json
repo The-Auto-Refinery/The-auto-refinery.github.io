@@ -1,0 +1,136 @@
+{
+    "seo_enhancements": {
+        "mobile_meta_tags": {
+            "mobile-web-app-capable": "yes",
+            "apple-mobile-web-app-capable": "yes",
+            "apple-mobile-web-app-status-bar-style": "black-translucent",
+            "theme-color": "#0066ff"
+        },
+        "open_graph_template": {
+            "og:type": "business.business",
+            "og:image": "https://theautorefinery.online/images/logo.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630"
+        },
+        "faq_schema_template": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Do you provide mobile auto detailing in {CITY}?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",  
+                        "text": "Yes! We provide professional mobile auto detailing service in {CITY}. We come directly to your location with all equipment and supplies needed for complete car detailing."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much does mobile auto detailing cost in {CITY}?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our mobile detailing in {CITY} starts at $150 for Silver Package, $250 for Gold Package, and $350 for Platinum Package. All prices include coming to your {CITY} location with no travel fees."
+                    }
+                },
+                {
+                    "@type": "Question", 
+                    "name": "What areas around {CITY} do you serve?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We serve {CITY} and surrounding Central Valley communities. Call (209) 214-9029 to confirm mobile detailing service availability in your specific area."
+                    }
+                }
+            ]
+        },
+        "structured_data_enhancements": {
+            "service_schema": {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "Mobile Auto Detailing",
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "The Auto Refinery Mobile Detailing"
+                },
+                "areaServed": "{CITY}, CA",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Mobile Auto Detailing Packages",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Silver Mobile Detail Package",
+                                "description": "Essential mobile detailing with exterior wash, interior cleaning, and basic protection at your {CITY} location."
+                            },
+                            "price": "150",
+                            "priceCurrency": "USD"
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service", 
+                                "name": "Gold Mobile Detail Package",
+                                "description": "Comprehensive mobile detailing with paint correction, ceramic coating, and complete interior restoration in {CITY}."
+                            },
+                            "price": "250",
+                            "priceCurrency": "USD"
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Platinum Mobile Detail Package",
+                                "description": "Ultimate luxury mobile detailing with multi-stage paint correction and premium ceramic coating in {CITY}."
+                            },
+                            "price": "350",
+                            "priceCurrency": "USD"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "technical_seo": {
+        "page_speed": {
+            "critical_css": "assets/css/mobile-optimization.css",
+            "async_js": "assets/js/mobile-navigation.js",
+            "preconnect_domains": [
+                "https://fonts.googleapis.com",
+                "https://fonts.gstatic.com"
+            ]
+        },
+        "mobile_optimization": {
+            "viewport": "width=device-width, initial-scale=1.0",
+            "responsive_images": true,
+            "touch_optimization": true,
+            "mobile_menu": true
+        },
+        "core_web_vitals": {
+            "lcp_optimization": "hero image optimization",
+            "fid_optimization": "mobile navigation script",
+            "cls_optimization": "fixed layout dimensions"
+        }
+    },
+    "local_seo": {
+        "geo_targeting": {
+            "geo.region": "US-CA",
+            "geo.placename": "{CITY}, California",
+            "ICBM": "{LAT}, {LON}"
+        },
+        "local_business_schema": {
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "{CITY}",
+                "addressRegion": "CA",
+                "addressCountry": "US",
+                "streetAddress": "Mobile Service - We Come To You"
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": "{CITY}",
+                "addressRegion": "CA"
+            }
+        }
+    }
+}

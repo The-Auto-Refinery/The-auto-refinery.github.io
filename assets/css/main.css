@@ -1263,18 +1263,18 @@ input, select, textarea {
     bottom: 11px;
 }
 
-/* Testimonial Cards - Ensure consistent 430px height */
+/* Testimonial Cards - Ensure consistent 330px height */
 .auto-refinery .testimonials-section .testimonial-card {
-    height: 430px !important;
-    min-height: 430px !important;
-    max-height: 430px !important;
+    height: 330px !important;
+    min-height: 330px !important;
+    max-height: 330px !important;
     overflow: hidden !important;
 }
 
 .auto-refinery .testimonials-carousel .testimonial-card {
-    height: 430px !important;
-    min-height: 430px !important;
-    max-height: 430px !important;
+    height: 330px !important;
+    min-height: 330px !important;
+    max-height: 330px !important;
     overflow: hidden !important;
 }
 
@@ -2097,3 +2097,22 @@ h1.major:after,
         font-size: 1.6rem;
     }
 }
+
+/* Hero Section */
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Remove the animation properties */
+    /* animation: fadeIn 1s ease-in; */
+    /* opacity: 0; */
+    /* animation-fill-mode: forwards; */
+    /* animation-delay: 0.5s; */
+    
+    /* Instead, make it fully visible immediately */
+    opacity: 1;
+}
+
+/* If there's a specific keyframe animation for fadeIn, we can leave it in place 
+   as it may be used elsewhere, but we're no longer applying it to the h1 */

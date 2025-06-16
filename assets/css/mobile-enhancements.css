@@ -1,18 +1,18 @@
 /* Mobile Enhancements for The Auto Refinery */
 
-/* Mobile testimonial styles */
+/* General Mobile Optimizations */
 @media screen and (max-width: 768px) {
     /* Testimonials section mobile styling */
     .auto-refinery .testimonials-slider {
-        min-height: 485px !important;
-        max-height: 485px !important;
+        min-height: 380px !important;
+        max-height: 380px !important;
         height: auto !important;
     }
     
     .auto-refinery .testimonial-card {
         padding: 1.5rem;
-        min-height: 435px !important;
-        max-height: 435px !important;
+        min-height: 330px !important;
+        max-height: 330px !important;
         overflow: hidden !important;
     }
     
@@ -46,6 +46,21 @@
     .auto-refinery .indicator {
         width: 14px;
         height: 14px;
+    }
+    
+    /* About Section Mobile Fixes */
+    .about-image {
+        display: none; /* Hide the about image on mobile */
+    }
+    
+    .about-content {
+        width: 100%; /* Take full width when image is hidden */
+        padding: 2rem 1rem; /* Add proper padding */
+    }
+    
+    .about-section .container {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 3rem 1rem;
     }
 }
 
@@ -112,12 +127,78 @@
         position: relative !important;
         overflow: visible !important;
     }
+    
+    /* Services Grid Fixes */
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-card .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Ensure service details are properly formatted */
+    .service-details {
+        padding: 1rem 0 0;
+    }
+    
+    .service-details ul li {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Premium maintenance card (full width card) */
+    .premium-card-content {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .premium-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .premium-card-discount {
+        margin-left: 0;
+    }
+    
+    .premium-plan-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .premium-card-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .premium-card-cta .button {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .auto-refinery .services-section .services-grid {
         padding: 0 1rem !important;
         gap: 1.5rem !important;
+    }
+    
+    /* Further about section adjustments for very small screens */
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
 
@@ -283,5 +364,388 @@
         position: static;
         display: inline-block;
         margin-bottom: 1rem;
+    }
+}
+
+/* Location Pages Mobile Fixes */
+@media screen and (max-width: 768px) {
+    /* Location Content Layout */
+    .location-content {
+        flex-direction: column;
+    }
+    
+    .location-info {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .location-sidebar {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    /* Location Hero */
+    .location-hero {
+        padding: 4rem 1rem 2rem;
+    }
+    
+    .location-title {
+        font-size: 1.8rem;
+    }
+    
+    .location-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Location Features */
+    .location-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+    
+    /* Location Areas */
+    .location-areas {
+        column-count: 2;
+    }
+    
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Single column location areas for very small screens */
+    .location-areas {
+        column-count: 1;
+    }
+}
+
+/* Mobile Navigation Improvements */
+@media screen and (max-width: 768px) {
+    /* Header & Navigation Fixes */
+    header .container {
+        padding: 0.8rem;
+    }
+    
+    header .logo img {
+        max-height: 40px; /* Smaller logo on mobile */
+    }
+    
+    header .logo span {
+        font-size: 1.2rem; /* Smaller text on mobile */
+    }
+    
+    .nav-menu {
+        transition: all 0.3s ease;
+        position: fixed;
+    }
+    
+    .nav-toggler {
+        display: block;
+        z-index: 999;
+    }
+    
+    /* Ensure proper tap targets for mobile navigation */
+    .nav-list li a {
+        padding: 1.2rem 1rem; /* Larger tap targets */
+        display: block;
+    }
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggler {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-toggler span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggler.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggler.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggler.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggler {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: #111;
+        z-index: 999;
+        transition: left 0.3s ease;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        padding: 5rem 1rem 2rem;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-list li {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .nav-list li a {
+        padding: 1rem;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* Hero Section Mobile Fixes */
+@media screen and (max-width: 768px) {
+    /* Hero Section Fixes */
+    .hero-section {
+        height: auto;
+        min-height: 70vh;
+        padding: 6rem 1rem 4rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+    }
+    
+    .hero-buttons .button {
+        padding: 0.8rem 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* ...existing code... */
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* ...existing code... */
+}
+
+/* Testimonials and Gallery Mobile Fixes */
+@media screen and (max-width: 768px) {
+    /* Testimonials Section */
+    .testimonial {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-content p {
+        font-size: 0.95rem;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .testimonial-author-image {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Gallery Section */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 0.5rem;
+    }
+    
+    .gallery-item {
+        aspect-ratio: 1/1;
+    }
+    
+    /* Adjust overlay content for smaller screens */
+    .gallery-overlay {
+        padding: 0.8rem;
+    }
+    
+    .gallery-overlay h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Single column gallery for very small screens */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General Mobile Layout Fixes */
+@media screen and (max-width: 768px) {
+    /* Section Spacing */
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .testimonial {
+        padding: 1.5rem;
+    }
+    
+    .section-title {
+    /* Buttons */: 1.8rem;
+    .button {thor {om: 1.5rem;
+        padding: 0.8rem 1.5rem;lumn;
+        font-size: 0.95rem;   align-items: center;
+    }    text-align: center;
+        padding: 0.8rem 1.5rem;
+    /* Container */0.95rem;
+    .container {image {
+        padding: 0 1rem;   margin-right: 0;
+    }    margin-bottom: 0.5rem;
+    .container {
+    /* Footer */ 0 1rem;
+    .footer-inner {* Gallery Section */
+        flex-direction: column;   .gallery-grid {
+        text-align: center;        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 0.5rem;
+    }   flex-direction: column;
+        text-align: center;
+    .footer-brand {
+        font-size: 1.2rem;   }
+        er-brand {
+font-size: 1.2rem;
+    }
+    
+    .footer-divider {
+        display: none;
+    }
+}
+
+/* Contact Section Mobile Fixes */
+}    }        font-size: 0.8rem;    .footer-copyright {        }        display: none;    .footer-divider {    /* Service Detail Pages Mobile Fixes */@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    /* Service Header */gallery-overlay {
+    .service-header {column;       padding: 0.8rem;
+        padding: 4rem 1rem 2rem;    }
+    }
+    er,
+    .service-header h1 {r {0.9rem;
+        font-size: 1.8rem;   width: 100%;
+    }   }
+        
+    .service-subtitle {reen and (max-width: 480px) {
+        font-size: 0.95rem;
+    }
+    
+    /* Service Meta */
+    .service-meta {
+        flex-direction: column;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}    }        display: none;    .process-step::after {        }        margin-bottom: 1.5rem;        width: 100%;    .process-step {        }        flex-direction: column;    .process-steps {    /* Process Steps */        }        margin-top: 1.5rem;    .details-column + .details-column {        }        grid-template-columns: 1fr;    .service-details-grid {    /* Service Details Grid */        }        justify-content: center;        width: 100%;    .meta-item {        }        gap: 0.8rem;        align-items: center;
+
+
+
+
+
+
+
+
+
+
+}    }        padding: 0.8rem 0;    .contact-info-item {        }        padding: 0.8rem;    .contact-form textarea {    .contact-form input,        }        margin-bottom: 1rem;    .contact-form .form-group {        }        margin-top: 2rem;    /* Single column gallery for very small screens */
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }

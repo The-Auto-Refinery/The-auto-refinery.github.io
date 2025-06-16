@@ -1,0 +1,310 @@
+/* Service Areas Preview Section - Homepage */
+.service-areas-preview {
+    background-color: var(--color-bg-light);
+    padding: 4rem 0;
+    position: relative;
+}
+
+.service-areas-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,102,255,0.15) 0%, rgba(0,0,0,0) 70%);
+    pointer-events: none;
+}
+
+.service-areas-preview .container {
+    position: relative;
+    z-index: 2;
+}
+
+.service-areas-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-areas-header .section-subtitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.service-areas-header .section-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #0066ff, transparent);
+}
+
+.areas-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 2.5rem 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Updated to 4 columns */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+
+.area-card {
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(0, 102, 255, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.area-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+}
+
+.area-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, rgba(0, 102, 255, 0.7), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.area-card:hover::after {
+    transform: scaleX(1);
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.25);
+    border-color: rgba(0, 102, 255, 0.5);
+}
+
+.area-card.primary-area {
+    border-color: rgba(0, 102, 255, 0.5);
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.2);
+}
+
+.area-card.primary-area::before {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, transparent 60%);
+}
+
+.area-card.primary-area:hover {
+    background: rgba(0, 102, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.35);
+}
+
+.area-icon {
+    font-size: 1.5rem;
+    color: #0066ff;
+    margin-bottom: 0.5rem;
+}
+
+.area-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0066ff;
+}
+
+.area-card p {
+    font-size: 0.9rem;
+    margin: 0 0 1rem 0;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+.area-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: #0066ff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.area-link:hover {
+    color: #4d8cff;
+    text-decoration: underline;
+}
+
+.areas-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.locations-button {
+    min-width: 200px;
+}
+
+.locations-button.primary {
+    background: linear-gradient(135deg, #0066ff, #0052cc);
+    color: white;
+    border-color: #0066ff;
+}
+
+.locations-button.primary:hover {
+    background: linear-gradient(135deg, #0052cc, #003d99);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.3);
+}
+
+.locations-button.secondary {
+    background: transparent;
+    color: #0066ff;
+    border-color: #0066ff;
+}
+
+.locations-button.secondary:hover {
+    background: #0066ff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.2);
+}
+
+.locations-button.ghost {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.locations-button.ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.areas-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .service-areas-preview {
+        padding: 3.5rem 0;
+    }
+    
+    .service-areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        padding: 0 1rem;
+    }
+    
+    .area-card {
+        padding: 1.8rem 1.2rem;
+    }
+    
+    .service-areas-header .section-subtitle {
+        font-size: 1.8rem;
+        padding-bottom: 12px;
+    }
+    
+    .service-areas-header .section-subtitle::after {
+        width: 60px;
+    }
+    
+    .areas-description {
+        font-size: 1.05rem;
+        padding: 0 1rem;
+    }
+    
+    .cta-buttons-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .locations-button {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+    
+    .area-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-areas-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto 2.5rem auto;
+    }
+    
+    .area-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .area-link {
+        padding: 8px 20px;
+        margin-top: 0.8rem;
+        width: 100%;
+    }
+    
+    .cta-buttons-row {
+        gap: 0.8rem;
+    }
+    
+    .service-areas-header .section-subtitle {
+        font-size: 1.6rem;
+    }}
+    
+    .locations-button {
+        max-width: 260px;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }

@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     if (testimonialSlider && testimonials.length > 0) {
-        // Only consider the first 3 testimonials
-        const totalTestimonials = Math.min(testimonials.length, 3);
+        // Handle all 5 testimonials now
+        const totalTestimonials = Math.min(testimonials.length, 5);
         let currentIndex = 0;
         let autoplayTimer;
         
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Function to show testimonial at specific index
         function showTestimonial(index) {
-            // Handle index boundaries - only cycle between 0, 1, and 2
+            // Handle index boundaries - cycle between all 5 testimonials
             if (index < 0) index = totalTestimonials - 1;
             if (index >= totalTestimonials) index = 0;
             

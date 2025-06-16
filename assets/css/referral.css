@@ -1,0 +1,341 @@
+/* Referral Program Section Styles */
+.referral-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.referral-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="%23333333" opacity="0.3"/><circle cx="75" cy="75" r="2" fill="%23333333" opacity="0.3"/></svg>') repeat;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.referral-content {
+    position: relative;
+    z-index: 2;
+}
+
+.referral-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.referral-header .section-title {
+    color: #ffffff;
+}
+
+.referral-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066ff, #004cc7);
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.referral-subtitle {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-top: 0.5rem;
+}
+
+.referral-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.referral-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+.referral-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0066ff, #004cc7);
+}
+
+.referral-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.3);
+    border-color: rgba(0, 102, 255, 0.4);
+}
+
+.referral-step {
+    text-align: center;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066ff, #004cc7);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    font-size: 2rem;
+    color: #0066ff;
+    margin-bottom: 1rem;
+}
+
+.referral-step h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.referral-step p {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.referral-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #ffffff;
+}
+
+.benefit-item i {
+    color: #0066ff;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.benefit-item span {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.referral-cta {
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+.referral-cta h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.referral-cta p {
+    color: #cccccc;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.referral-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.referral-buttons .button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.referral-buttons .button.primary {
+    background: linear-gradient(135deg, #0066ff, #004cc7);
+    color: white;
+    border: none;
+}
+
+.referral-buttons .button.primary:hover {
+    background: linear-gradient(135deg, #004cc7, #003399);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+}
+
+.referral-buttons .button.secondary {
+    background: transparent;
+    color: #0066ff;
+    border: 2px solid #0066ff;
+}
+
+.referral-buttons .button.secondary:hover {
+    background: #0066ff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+}
+
+.referral-terms {
+    text-align: center;
+    color: #999999;
+}
+
+.referral-terms small {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Animations */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 0.6s ease forwards;
+}
+
+.zoom-in.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.zoom-in.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .referral-section {
+        padding: 3rem 0;
+    }
+    
+    .referral-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .referral-card {
+        padding: 1.5rem;
+    }
+    
+    .referral-benefits {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+    
+    .referral-cta {
+        padding: 2rem 1.5rem;
+    }
+    
+    .referral-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .referral-buttons .button {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .referral-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .step-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .referral-header {
+        margin-bottom: 2rem;
+    }
+    
+    .referral-subtitle {
+        font-size: 1rem;
+    }
+    
+    .referral-step h3 {
+        font-size: 1.1rem;
+    }
+    
+    .referral-step p {
+        font-size: 0.9rem;
+    }
+    
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .benefit-item span {
+        font-size: 0.9rem;
+    }
+}

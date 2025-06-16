@@ -4,10 +4,21 @@ Allow: /
 # Priority pages for mobile detailing SEO
 Allow: /index.html
 Allow: /modesto-mobile-auto-detailing.html
+Allow: /stockton-mobile-auto-detailing.html
+Allow: /turlock-mobile-auto-detailing.html
+Allow: /tracy-mobile-auto-detailing.html
+Allow: /manteca-mobile-auto-detailing.html
+Allow: /merced-mobile-auto-detailing.html
+Allow: /riverbank-mobile-auto-detailing.html
 Allow: /mobile-detailing-locations.html
+Allow: /maintenance-plans.html
 Allow: /images/
 Allow: /assets/css/
 Allow: /assets/js/
+
+# Mobile-specific assets
+Allow: /assets/css/mobile-optimization.css
+Allow: /assets/js/mobile-navigation.js
 
 # Block non-essential files to improve crawl budget
 Disallow: /nap-citations.html
@@ -26,6 +37,7 @@ Disallow: /*?fbclid=*
 Disallow: /*?gclid=*
 
 # Sitemaps for search engines
+Sitemap: https://theautorefinery.online/sitemap-index.xml
 Sitemap: https://theautorefinery.online/sitemap.xml
 Sitemap: https://theautorefinery.online/mobile-sitemap.xml
 
@@ -69,3 +81,17 @@ Allow: /assets/
 
 User-agent: Googlebot-Mobile
 Allow: /
+Crawl-delay: 1
+
+# Mobile-first indexing optimization
+User-agent: Googlebot-Smartphone
+Allow: /
+Crawl-delay: 1
+
+# Mobile app crawlers
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2

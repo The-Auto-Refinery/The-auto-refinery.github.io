@@ -187,4 +187,33 @@
 				}
 			});
 
+	// Mobile Navigation Toggle
+		document.addEventListener('DOMContentLoaded', function() {
+			const navToggler = document.querySelector('.nav-toggler');
+			const navMenu = document.querySelector('.nav-menu');
+			const navList = document.querySelector('.nav-list');
+			
+			if (navToggler) {
+				navToggler.addEventListener('click', function() {
+					navToggler.classList.toggle('active');
+					navMenu.classList.toggle('active');
+					document.body.classList.toggle('menu-open');
+				});
+				
+				// Close menu when clicking a link
+				if (navList) {
+					const navLinks = navList.querySelectorAll('a');
+					navLinks.forEach(link => {
+						link.addEventListener('click', function() {
+							navToggler.classList.remove('active');
+							navMenu.classList.remove('active');
+							document.body.classList.remove('menu-open');
+						});
+					});
+				}
+			}
+			
+			// ...existing code...
+		});
+
 })(jQuery);
