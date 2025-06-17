@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Set up navigation button events
-        if (prevBtn) {
+        // Set up navigation button events (only if buttons exist and are visible)
+        if (prevBtn && window.getComputedStyle(prevBtn).display !== 'none') {
             prevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 console.log('Previous button clicked');
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        if (nextBtn) {
+        if (nextBtn && window.getComputedStyle(nextBtn).display !== 'none') {
             nextBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 console.log('Next button clicked');
@@ -118,10 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Set up indicator dots
+        // Set up indicator dots (only if indicators exist and are visible)
         if (indicators.length > 0) {
             indicators.forEach((indicator, i) => {
-                if (i < totalTestimonials) {
+                if (i < totalTestimonials && window.getComputedStyle(indicator).display !== 'none') {
                     indicator.addEventListener('click', () => {
                         console.log('Indicator', i, 'clicked');
                         showTestimonial(i);
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
             autoplayTimer = setInterval(() => {
                 console.log('Autoplay: moving to next testimonial');
                 showTestimonial(currentIndex + 1);
-            }, 7000);
+            }, 5000); // Changed from 7000 to 5000 (5 seconds)
         }
         
         function resetAutoplay() {

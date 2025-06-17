@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function startAutoplay() {
             autoplayTimer = setInterval(() => {
                 showSlide(currentIndex + 1);
-            }, 7000); // Change slide every 7 seconds
+            }, 5000); // Change slide every 5 seconds (changed from 7000)
         }
         
         startAutoplay();
