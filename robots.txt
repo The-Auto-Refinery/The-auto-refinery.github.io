@@ -1,0 +1,12 @@
+# Robots.txt for The Auto Refinery
+# https://theautorefinery.online
+
+User-agent: *
+Allow: /
+
+# Block test files from indexing
+Disallow: /test-carousel.html
+Disallow: /test-simple.html
+
+# Sitemap location
+Sitemap: https://theautorefinery.online/sitemap.xml
